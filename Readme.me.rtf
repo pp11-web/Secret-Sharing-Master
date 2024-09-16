@@ -1,0 +1,54 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #Secret Sharing Master\
+##Introduction\
+Secret Sharing Master is a Python-based application that implements a (k, n) threshold secret sharing scheme. In this scheme, a secret is divided into n shares, where only k or more shares can be combined to reconstruct the original secret. This application is built to ensure that sensitive data can be split among multiple participants in a secure way. Even if some participants are compromised, the secret remains protected until at least k valid shares are collected.\
+\
+##Features\
+-Secret splitting: Split a secret into n shares using Shamir's Secret Sharing algorithm.\
+-Threshold reconstruction: Reconstruct the secret using any k out of n valid shares.\
+-Secure and efficient: Ensures the confidentiality of the secret and provides a simple, easy-to-use interface for both splitting and reconstruction.\
+-Customizable: Supports custom values for k (threshold) and n (total shares).\
+-Cross-platform: Works on any operating system with Python support.\
+##How It Works\
+Secret Sharing Master leverages Shamir's Secret Sharing algorithm, a cryptographic technique where:\
+\
+1, A secret is split into n shares.\
+2, Any k or more shares can be used to reconstruct the secret.\
+3, Fewer than k shares provide no information about the original secret.\
+The key idea is based on polynomial interpolation, where the secret is encoded as a constant in a randomly generated polynomial of degree k-1. Each share represents a point on this polynomial, and the secret can be reconstructed by solving the polynomial equation.\
+\
+#Prerequisites\
+Before using the project, make sure you have the following installed:\
+\
+-Python 3.x\
+-pip (Python package manager)\
+##Installation\
+1, Clone the repository:\
+'''git clone https://github.com/pp11-web/Secret-Sharing-Master.git'''\
+2, Navigate to the project directory:\
+'''cd Secret-Sharing-Master'''\
+3, Install the required dependencies:\
+'''pip install -r requirements.txt'''\
+##Run\
+Splitting a Secret\
+To split a secret into shares:\
+\
+'''python main.py'''\
+\
+\
+Steps to Contribute:\
+Fork the repository.\
+Create a new branch (git checkout -b feature/your-feature).\
+Commit your changes (git commit -m 'Add some feature').\
+Push to the branch (git push origin feature/your-feature).\
+Open a pull request.\
+\
+Acknowledgements\
+This project was inspired by the need for secure, easy-to-use secret sharing solutions. Special thanks to the cryptography community for providing the foundational algorithms used in this project.\
+}
